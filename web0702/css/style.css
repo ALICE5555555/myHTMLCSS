@@ -1,0 +1,113 @@
+@charset "UTF-8";/* 一定要在第一行 */
+/* 重置所有標籤的樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*不累加內距paddind=g及邊框border*/
+}
+/* 重置字體 */
+body {
+    font-family:
+    /*西文*/ -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    /*中文*/ "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    background-color: #327d64;
+}
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+/* 重置列表 */
+ul,
+ol {
+    list-style: none;
+}
+/* 重置圖片 */
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+/* 重置連接 */
+a {
+    display:block;/*將預設inline改為block*/
+    text-decoration: none;
+    color:rgb(229, 183, 183);
+}
+/*共用區*/
+.btn-s{
+    background-color: rgb(235, 140, 110);
+    width: auto !important;
+    height: 35px; 
+    line-height: 30px;
+    padding:0 20px;
+    border-radius: 99px;
+    transition: .35s ease-in-out;
+}
+.btn-s:hover{
+    background-color: #444;
+    color:white;
+}
+/*頁首區*/
+#topbar{
+    display:flex; /*預設主軸為水平*/
+    justify-content:space-between; /*主軸(水平)均分貼齊頭尾*/
+    align-items:center; /*副軸(垂直置中)*/
+    padding:20px;
+    
+}
+.logo img{
+    width:200px; /*相對於父元素*/
+}
+.logo2{
+    margin: 12px 0 0 0;
+}
+.logo2 img{
+    width: 150px;
+    margin:-30px 20px 20px 0 ;
+    /* padding: 1px 10px 0 0; */
+    /* border: 1px solid red;     */
+}
+.navigation{
+    display:flex;
+    flex-direction:column;/*主軸垂直*/
+    align-items:flex-end;/*副軸(水平)置底*/
+}
+.navigation .icon{
+    display:flex;
+}
+.navigation .icon a{
+    width:35px;
+    height:35px;
+    margin-left:70px;
+    transition:all .35s ease-in-out;
+}
+.navigation .menu {
+    display:flex;
+    margin:10px 0;/*控制父層的外距*/
+    padding: 0 0 30px;
+}
+.navigation .menu li {
+    border-right: solid 1px #eb8c6e;
+    }
+.navigation .menu li:last-child {
+    border-right:none;
+    }
+.navigation .menu a {
+    color: #eb8c6e;
+    font-size: 1.35rem;
+    line-height: 1;
+    margin:0 20px;/*控制子層的外距*/
+    border-bottom: solid 5px transparent;
+}
+.navigation .menu a:hover{
+    border-bottom: solid 2px white;
+    transition: .35s ease-in-out;
+}
