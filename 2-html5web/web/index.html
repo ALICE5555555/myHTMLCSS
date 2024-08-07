@@ -3,195 +3,393 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>米塔花市-html5web</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Rita's Flower</title>
+    <link rel="icon" href="./favicon.ico">
+    <!-- 換圖輪播css -->
+    <link rel="stylesheet" href="./CSS/carousel.css">
+    <!-- 自訂的css -->
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 
 <body>
-<!--頁首區 -->
-<header id="topbar">
-    <h1 class="logo">
-        <a href="#"><img src="./images/logo_b.svg" alt="米塔花市LOGO"></a>
-    </h1>
-    <!--選單列-->
-    <nav class="navigation">
-        <!--icon btn | ul.icon>li*3>a-->
-        <ul class="icon">
-            <li><a class="icon-fb" href="#"></a></li>
-            <li><a class="icon-ig" href="#"></a></li>
-            <li><a class="icon-line" href="#"></a></li>
-            <li><a class="btn-s" href="./login.html">Login</a></li>
-        </ul>
-        <!--main btn | ul.menu>li*6>a-->
-        <ul class="menu">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">NEWS</a></li>
-            <li><a href="#">SERVICE</a></li>
-            <li><a href="#">VIDEO</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-    <section id="banner"></section>
-    <section id="news">
-        <header class="title">
-            <h2>NEWS</h2>
-            <H3>最新消息</H3>
-        </header>
-        <div class="box_list">
-            <article class="item">
-                <!-- a>(figure>img)+div.content>h1+p -->
-                <a href="#">
-                    <!-- 圖片 -->
-                    <figure><img src="./images/pt_news1.jpg" alt=""></figure>
-                    <!-- 內容 -->
-                    <div class="content">
-                        <h1>NEWS TITLE</h1>
-                        <p>位於市中心繁華地段的花之物語花店，自開業以來便致力於為顧客提供優質的花卉產品和貼心的服務。我們的花店擁有多年經驗的花藝師，他們以獨特的創意和精湛的技藝，設計出各式各樣精美的花束和花藝作品。無論是婚禮、生日、紀念日還是企業活動，我們都能根據您的需求，量身定制專屬的花藝設計，讓每一個重要時刻都充滿花香與美麗。
-
-                            在花之物語花店，我們深知花卉是傳遞情感的重要載體。從鮮豔奪目的玫瑰到清新脫俗的百合，從典雅的鬱金香到溫暖的向日葵，我們的花卉種類繁多，應有盡有。無論您喜愛何種風格的花卉，都能在我們的店裡找到最符合您心意的那一款。每一束花都經過精心挑選，確保花材的新鮮和質量。我們相信，只有最好的花卉才能表達最真摯的情感。
-                            
-                            除了花束和花藝設計，我們還提供多種花卉相關產品和服務。例如，各種精美的花瓶和花盆、植物養護用品以及花卉相關的禮品。我們的店內還設有舒適的休息區，讓您在選購花卉的同時，享受一杯香濃的咖啡，感受片刻的寧靜與悠閒。
-                            
-                            花之物語花店不僅重視產品質量，還非常注重客戶體驗。我們的服務團隊熱情、專業，無論您有任何問題或需求，他們都會耐心解答，並提供最適合的建議。我們還提供便捷的送花服務，無論您身處何地，只需一個電話或在線訂單，我們便會將最美的花卉送到您的手中，傳遞您的心意。
-                            
-                            我們堅持以客為本，始終把顧客的滿意度放在首位。未來，我們將不斷努力，繼續為大家帶來更多優質的花卉產品和服務。花之物語花店，期待與您一起，讓生活因花而美麗，因花而多彩。
-                            
-                            歡迎光臨花之物語花店，讓我們用花卉傳遞您的故事，裝點您的生活！</p>
-                    </div>
-                </a>
-            </article>
-            <article class="item">
-                <figure><img src="./images/pt_news2.jpg" alt=""></figure>
-                <div class="content">
-                    <h1>NEWS TITLE</h1>
-                    <p>位於市中心繁華地段的花之物語花店，自開業以來便致力於為顧客提供優質的花卉產品和貼心的服務。我們的花店擁有多年經驗的花藝師，他們以獨特的創意和精湛的技藝，設計出各式各樣精美的花束和花藝作品。無論是婚禮、生日、紀念日還是企業活動，我們都能根據您的需求，量身定制專屬的花藝設計，讓每一個重要時刻都充滿花香與美麗。
-
-                        在花之物語花店，我們深知花卉是傳遞情感的重要載體。從鮮豔奪目的玫瑰到清新脫俗的百合，從典雅的鬱金香到溫暖的向日葵，我們的花卉種類繁多，應有盡有。無論您喜愛何種風格的花卉，都能在我們的店裡找到最符合您心意的那一款。每一束花都經過精心挑選，確保花材的新鮮和質量。我們相信，只有最好的花卉才能表達最真摯的情感。
-                        
-                        除了花束和花藝設計，我們還提供多種花卉相關產品和服務。例如，各種精美的花瓶和花盆、植物養護用品以及花卉相關的禮品。我們的店內還設有舒適的休息區，讓您在選購花卉的同時，享受一杯香濃的咖啡，感受片刻的寧靜與悠閒。
-                        
-                        花之物語花店不僅重視產品質量，還非常注重客戶體驗。我們的服務團隊熱情、專業，無論您有任何問題或需求，他們都會耐心解答，並提供最適合的建議。我們還提供便捷的送花服務，無論您身處何地，只需一個電話或在線訂單，我們便會將最美的花卉送到您的手中，傳遞您的心意。
-                        
-                        我們堅持以客為本，始終把顧客的滿意度放在首位。未來，我們將不斷努力，繼續為大家帶來更多優質的花卉產品和服務。花之物語花店，期待與您一起，讓生活因花而美麗，因花而多彩。
-                        
-                        歡迎光臨花之物語花店，讓我們用花卉傳遞您的故事，裝點您的生活！</p>
-                </div>
-            </article>
-            <article class="item">
-                <figure><img src="./images/pt_news3.jpg" alt=""></figure>
-                <div class="content">
-                    <h1>NEWS TITLE</h1>
-                    <p>位於市中心繁華地段的花之物語花店，自開業以來便致力於為顧客提供優質的花卉產品和貼心的服務。我們的花店擁有多年經驗的花藝師，他們以獨特的創意和精湛的技藝，設計出各式各樣精美的花束和花藝作品。無論是婚禮、生日、紀念日還是企業活動，我們都能根據您的需求，量身定制專屬的花藝設計，讓每一個重要時刻都充滿花香與美麗。
-
-                        在花之物語花店，我們深知花卉是傳遞情感的重要載體。從鮮豔奪目的玫瑰到清新脫俗的百合，從典雅的鬱金香到溫暖的向日葵，我們的花卉種類繁多，應有盡有。無論您喜愛何種風格的花卉，都能在我們的店裡找到最符合您心意的那一款。每一束花都經過精心挑選，確保花材的新鮮和質量。我們相信，只有最好的花卉才能表達最真摯的情感。
-                        
-                        除了花束和花藝設計，我們還提供多種花卉相關產品和服務。例如，各種精美的花瓶和花盆、植物養護用品以及花卉相關的禮品。我們的店內還設有舒適的休息區，讓您在選購花卉的同時，享受一杯香濃的咖啡，感受片刻的寧靜與悠閒。
-                        
-                        花之物語花店不僅重視產品質量，還非常注重客戶體驗。我們的服務團隊熱情、專業，無論您有任何問題或需求，他們都會耐心解答，並提供最適合的建議。我們還提供便捷的送花服務，無論您身處何地，只需一個電話或在線訂單，我們便會將最美的花卉送到您的手中，傳遞您的心意。
-                        
-                        我們堅持以客為本，始終把顧客的滿意度放在首位。未來，我們將不斷努力，繼續為大家帶來更多優質的花卉產品和服務。花之物語花店，期待與您一起，讓生活因花而美麗，因花而多彩。
-                        
-                        歡迎光臨花之物語花店，讓我們用花卉傳遞您的故事，裝點您的生活！</p>
-                </div>
-            </article>
-        </div>
-    </section>
-    <!-- 服務項目 -->
-    <section id="service">
-        <!-- 標題區 -->
-        <header class="title">
-            <h2>SERVICE</h2>
-            <H3>服務項目</H3>
-        </header>
-        <!-- 列表區 -->
-        <!-- ul.box_list>li.item*4>a[href="#"]>h1{SERVICE TITLE}+p -->
-        <ul class="box_list">
-            <li class="item svc-1">
-                <a href="#" class="content">
-                    <h1>SERVICE TITLE</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti aperiam porro assumenda necessitatibus ex voluptate quia iure nam voluptatem quas iste soluta ab amet obcaecati commodi asperiores hic, modi ad!</p>
-                </a>
-            </li>
-            <li class="item svc-2" >
-                <a href="#" class="content">
-                    <h1>SERVICE TITLE</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem illum sequi incidunt facilis rerum laboriosam tenetur unde temporibus eligendi beatae consequatur ex, saepe sapiente. Sunt cum rerum facere cumque consectetur?</p>
-                </a>
-            </li>
-            <li class="item svc-3">
-                <a href="#" class="content">
-                    <h1>SERVICE TITLE</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, sunt facere quaerat numquam quis, deleniti iusto quibusdam explicabo neque vitae corrupti magni rem sint blanditiis, cum esse dicta earum quos.</p>
-                </a>
-            </li>
-            <li class="item svc-4">
-                <a href="#" class="content">
-                    <h1>SERVICE TITLE</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque esse id quas, molestias, porro delectus perspiciatis vero praesentium facere fuga vel velit cum ea architecto quo? Voluptas rem officiis veritatis.</p>
-                </a>
-            </li>
-        </ul>
-    </section>
-    <section id="video">
-        <header class="title">
-            <h2>VIDEO</h2>
-            <H3>相關影片</H3>
-        </header>
-        <!-- 影片容器 -->
-        <div class="video">
-            <!-- 影片本人 -->
-            <video src="./images/Planter.mp4" poster="./images/cover.jpg" controls autoplay muted></video>
-            <!-- 瀏覽器設定autoplay一定要搭配muted靜音才能使用 -->
-        </div>
-    </section>
-    <section id="about">
-
-        <div class="content">
-            <header class="title">
-                <h2>ABOUT</h2>
-                <H3>關於我們</H3>
-            </header>  
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, ipsa fuga. Hic maxime dolore distinctio unde perferendis autem accusamus obcaecati neque optio, laboriosam atque ducimus aperiam ut? Culpa quo libero error consequuntur! Suscipit est nesciunt aut eligendi pariatur veritatis commodi neque fuga a laborum? Totam nobis in minus tenetur esse! Tempore labore earum adipisci ut repellendus quidem sint cum aliquam modi, optio eveniet numquam dolor. Necessitatibus natus dicta, quas quod adipisci debitis ex nemo enim repellendus accusamus vero iste provident voluptate laborum accusantium minus doloribus? Quod odit alias est, incidunt labore corrupti et, aliquam quo dicta voluptatem non! Dolores maxime esse porro adipisci, asperiores fuga illum dolorum obcaecati harum, neque cumque laboriosam nulla excepturi! Tempora ea nulla neque consectetur rem ipsam doloribus aliquid, animi vero ipsa aspernatur minima at eligendi, alias ipsum praesentium reprehenderit quo, consequatur culpa similique repellat. Distinctio praesentium modi quia deserunt sunt iusto in, eveniet animi. Hic aperiam veniam illum facilis ratione asperiores, animi deleniti, perferendis expedita dignissimos nihil culpa dicta. Consequuntur harum, voluptatibus, numquam non hic officia rerum veniam sed assumenda corporis nemo temporibus consectetur doloremque ea nostrum nam illo ducimus? Vero repellendus ea corporis a dicta officia velit provident unde labore perferendis itaque asperiores cupiditate possimus minus, quod quasi aliquam? Laborum aperiam ullam maiores praesentium cupiditate deserunt inventore amet sapiente magnam dolor commodi accusamus nulla odio facere fugiat officiis eligendi, nihil veritatis dolore assumenda, ducimus voluptatibus animi ipsam corrupti. Tempore ipsam, dolore recusandae totam aut illum, velit suscipit a exercitationem, neque quisquam. Ipsum quaerat ex aperiam reprehenderit voluptates expedita similique? Optio asperiores dolores odit pariatur cupiditate architecto ex, soluta error sunt eos rerum nisi quos corporis eum velit iure blanditiis aspernatur molestiae fugit consequuntur reprehenderit autem assumenda! Porro maxime quibusdam ab reprehenderit necessitatibus sint, deleniti cupiditate perferendis cumque corrupti exercitationem minima libero, sed incidunt minus ducimus neque, ex sit. Modi placeat nisi iste ex voluptas, quibusdam excepturi cupiditate, cum eveniet sunt neque voluptate rerum itaque dolore, consequuntur necessitatibus ipsa dignissimos. Iure, explicabo dolor amet dolorem enim eos vel tempora cupiditate cumque laborum ullam iste excepturi numquam dolorum maxime impedit quia, quos architecto officia doloremque at sint? Ipsa laudantium sunt saepe earum impedit fuga alias dicta vero error excepturi iure laborum aspernatur dolor debitis et quas explicabo ad a eveniet quis autem, omnis consectetur. Quos, beatae! Harum, laboriosam, autem voluptatum optio veritatis dolorem nobis dicta ratione non velit, magni aperiam vero adipisci eum voluptates odit. Sed laudantium consectetur, nisi est exercitationem possimus totam tempora praesentium laborum nemo natus necessitatibus. Velit quis eaque consequuntur blanditiis nostrum quibusdam, consequatur numquam placeat, sed quam nesciunt ullam! Possimus eum architecto aspernatur quidem aut provident deserunt ratione. Quas numquam doloremque rem id? Fuga ducimus suscipit veniam dolorem cumque eveniet, eligendi accusantium delectus ad est accusamus iste explicabo impedit quibusdam inventore laboriosam libero officia corporis in eos ipsam assumenda id possimus. Expedita suscipit cupiditate labore eligendi quisquam quidem, perferendis repellat quo, quod animi esse vitae quia quis sequi aliquid ullam, voluptatum similique numquam dolore laborum saepe quaerat cumque blanditiis? Atque ea quidem laborum asperiores magnam labore molestias facilis rerum eaque quas aspernatur hic nobis, sunt quaerat quis minima sed aut reiciendis sapiente quasi nulla. Incidunt consequatur beatae nobis ipsam neque esse sit sequi fugiat doloribus in mollitia ullam doloremque enim culpa ab, omnis voluptates a dignissimos quidem asperiores perferendis. Architecto asperiores quidem quam nemo dolores molestias non quasi itaque adipisci aliquid est obcaecati assumenda commodi illo sint modi, eaque numquam earum voluptas, iure harum odio autem! Fugit quos repudiandae commodi voluptatibus ipsum necessitatibus, sapiente dolor minima esse nemo itaque aliquam ducimus omnis autem reiciendis porro optio facere, neque soluta consequuntur quae quasi qui aliquid! Dolorum quisquam iure voluptatem similique quo optio pariatur voluptas dolores nam vitae. Culpa laboriosam dignissimos at harum magni, eius fugit? Ratione ullam nam perferendis? Tempore dicta obcaecati aliquid, vitae cum necessitatibus doloremque porro quidem odit. Voluptate ab aliquam veniam pariatur, excepturi expedita temporibus neque facilis tempore consequuntur praesentium vero, quos alias voluptatum autem quae. Cupiditate ab inventore laudantium itaque facere ducimus expedita? Possimus, in. Expedita tempore aut laborum consectetur minima nisi a nihil dolores molestiae, dignissimos ratione sint totam ea, culpa deleniti? Explicabo tenetur sapiente dolore ab porro tempora corporis voluptatem aliquid mollitia illum laboriosam nesciunt qui id maiores reprehenderit totam veniam corrupti aut, enim ad ipsam commodi, assumenda praesentium alias! Mollitia quidem perferendis ducimus, doloribus dolore, assumenda laudantium saepe distinctio nesciunt, nam commodi facilis. Eum ipsum vitae repellendus necessitatibus reprehenderit optio, nihil ab et, sint, assumenda veniam quisquam explicabo eligendi recusandae voluptas ullam hic adipisci officia a aliquid amet nulla cumque sunt! In excepturi adipisci pariatur maiores iusto facere rem vitae, architecto aliquid ab cumque ipsa error, quos repellendus. Possimus sapiente tenetur enim, recusandae cumque nisi officia nesciunt aliquam, ad eaque fugiat tempore, amet est molestiae? Nemo beatae natus vitae esse voluptatibus asperiores et minima iure, ea soluta veniam voluptas ut corrupti vero? Commodi fugit architecto id consequatur quam a, perferendis nemo! Modi facere excepturi quia nostrum non expedita, harum ullam veniam fugiat consequatur et velit rem odit aspernatur itaque beatae. Rem harum veritatis at repellat quia nisi, fugiat eos maiores omnis, natus numquam quam tenetur nesciunt ex. Mollitia similique sunt reiciendis, soluta molestiae est ratione debitis. Necessitatibus asperiores alias tempore cupiditate eveniet tempora dolorem ab obcaecati tenetur minus nihil molestias, soluta quae cum accusantium a mollitia! Reprehenderit veritatis dolorem nesciunt nihil repudiandae suscipit deleniti laboriosam quidem tempora voluptas saepe magnam illum neque perferendis minus, consectetur maxime tenetur repellendus. Placeat amet cum rem quidem dolore optio porro voluptates mollitia perferendis reiciendis repudiandae odio unde eum quam nobis dignissimos rerum, ea culpa quos repellendus, earum blanditiis. Mollitia, aliquam praesentium fugit est quisquam odio perspiciatis eveniet nulla necessitatibus nihil blanditiis quas tempore modi explicabo voluptatum, nam omnis a magni fugiat harum, provident qui facilis. Culpa asperiores eligendi suscipit temporibus maxime est, molestiae repudiandae, rerum consectetur error sequi odit, dolorum consequatur. Est dolorum mollitia iusto labore quos, architecto et, ipsam dolore eaque sunt, tenetur soluta autem aut praesentium adipisci hic earum rem amet ipsa voluptas quae vero. Quam, perferendis cupiditate.</p>  
-        </div>
-
-    </section>
-    <section id="contact">
-        <header class="title">
-            <h2>CONTACT</h2>
-            <h3>聯絡我們</h3>
-        </header>
-        <form action="" method="post" name="form--contact" id="form--contact" title="聯絡我們表單">
-            <label for="username">*姓名：</label>
-            <input type="text" name="username" id="username" title="姓名欄位" placeholder="請輸入姓名" required autocomplete>
-
-            <label for="tel">聯絡電話：</label>
-            <input type="tel" name="tel" id="tel" title="聯絡電話欄位" placeholder="請輸入聯絡電話" autocomplete >
-
-            <label for="email">*Email：</label>
-            <input type="email" name="email" id="email" title="email欄位" placeholder="請輸入電子郵件信箱" required >
-
-            <label for="message">*留言：</label> 
-            <textarea taname="message" id="message" title="留言欄位" rows="10" placeholder="請輸入您的意見" required ></textarea> 
-
-            <small>此表單為練習作品，不具有蒐集資料的功能。</small>
-            <!-- 表單按鈕一定要放在form裡面 -->
-            <button type="submit" name="btn_contact--submit" id="btn_contact--submit" title="送出按鈕">
-                <span>送出</span>
+    <!-- 頁首區 -->
+    <header id="topbar">
+        <!-- LOGO區 -->
+        <h1 class="logo">
+            <a href="./index.html">
+                <!-- <img src="./images/logo_b.svg" alt="Rita花室LOGO"> -->
+                <svg width="100%" height="auto" viewBox="0 0 390 390" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_14_39)">
+                        <path
+                            d="M92.032 147.2C92.032 149.197 92.3392 150.733 92.9536 151.808C93.7216 152.73 95.5648 153.19 98.4832 153.19H120.832C123.75 153.19 127.053 153.037 130.739 152.73C134.579 152.269 138.573 151.117 142.72 149.274C147.021 147.277 151.322 144.282 155.622 140.288C160.077 136.141 164.301 130.381 168.294 123.008H171.981L165.299 163.098C158.848 162.79 150.4 162.56 139.955 162.406C129.51 162.253 116.608 162.176 101.248 162.176C85.888 162.176 73.216 162.253 63.232 162.406C53.4016 162.56 46.0288 162.79 41.1136 163.098V157.568L56.7808 154.573C60.7744 154.112 62.7712 152.499 62.7712 149.734V33.8432C62.7712 30.9248 62.2336 29.0816 61.1584 28.3136C60.0832 27.5456 58.624 26.9312 56.7808 26.4704L44.3392 23.4752V17.4848C52.6336 17.9456 65.0752 18.176 81.664 18.176C98.2528 18.176 108.544 17.9456 112.538 17.4848V23.4752L98.0224 26.4704C96.0256 26.9312 94.4896 27.5456 93.4144 28.3136C92.4928 28.928 92.032 30.7712 92.032 33.8432V147.2ZM281.396 165.402C270.029 165.402 259.354 163.712 249.37 160.333C239.54 156.8 230.938 151.885 223.565 145.587C216.192 139.136 210.356 131.379 206.055 122.317C201.908 113.254 199.834 103.194 199.834 92.1344C199.834 80.768 201.984 70.4 206.285 61.0304C210.74 51.6608 216.73 43.6736 224.256 37.0688C231.783 30.464 240.538 25.3952 250.522 21.8624C260.66 18.176 271.412 16.3328 282.778 16.3328C294.298 16.3328 304.896 18.2528 314.573 22.0928C324.404 25.9328 332.928 31.232 340.148 37.9904C347.367 44.5952 352.973 52.5056 356.967 61.7216C361.114 70.784 363.188 80.6912 363.188 91.4432C363.188 102.195 361.191 112.102 357.197 121.165C353.357 130.227 347.828 138.061 340.608 144.666C333.543 151.117 324.941 156.186 314.804 159.872C304.82 163.558 293.684 165.402 281.396 165.402ZM233.242 93.2864C233.242 101.12 234.317 108.877 236.468 116.557C238.772 124.083 242.074 130.842 246.375 136.832C250.676 142.822 255.821 147.661 261.812 151.347C267.956 155.034 274.944 156.877 282.778 156.877C297.984 156.877 309.658 151.501 317.799 140.749C326.093 129.997 330.24 114.022 330.24 92.8256C330.24 83.7632 329.242 75.1616 327.245 67.0208C325.248 58.88 322.176 51.8144 318.029 45.824C314.036 39.68 308.967 34.8416 302.823 31.3088C296.679 27.6224 289.536 25.7792 281.396 25.7792C273.101 25.7792 265.882 27.6992 259.738 31.5392C253.748 35.3792 248.756 40.448 244.762 46.7456C240.922 53.0432 238.004 60.2624 236.007 68.4032C234.164 76.544 233.242 84.8384 233.242 93.2864Z"
+                            fill="black" />
+                        <path
+                            d="M191.104 304.042L180.506 305.654C177.894 306.115 176.051 306.806 174.976 307.728C174.054 308.496 173.594 309.955 173.594 312.106V337.68C173.594 342.134 173.44 345.59 173.133 348.048C172.979 350.352 172.442 352.272 171.52 353.808C170.752 355.19 169.446 356.342 167.603 357.264C165.76 358.032 163.226 359.03 160 360.259C156.928 361.488 153.395 362.563 149.402 363.485C145.562 364.406 141.414 365.251 136.96 366.019C132.506 366.634 127.898 367.094 123.136 367.402C118.528 367.709 114.074 367.862 109.773 367.862C98.4064 367.862 87.5776 366.326 77.2864 363.254C66.9952 360.029 58.0096 355.344 50.3296 349.2C42.6496 343.056 36.5056 335.53 31.8976 326.621C27.4432 317.558 25.216 307.19 25.216 295.517C25.216 282 27.6736 270.403 32.5888 260.726C37.6576 250.896 44.3392 242.832 52.6336 236.534C60.928 230.083 70.528 225.398 81.4336 222.48C92.3392 219.408 103.782 217.872 115.763 217.872C136.192 217.872 153.242 221.558 166.912 228.931L168.755 267.638L163.226 268.33C160.922 262.646 158.234 257.347 155.162 252.432C152.243 247.363 148.864 242.986 145.024 239.299C141.184 235.459 136.73 232.464 131.661 230.314C126.746 228.163 121.216 227.088 115.072 227.088C105.395 227.088 96.9472 228.701 89.728 231.926C82.6624 235.152 76.8256 239.683 72.2176 245.52C67.6096 251.203 64.1536 258.115 61.8496 266.256C59.5456 274.243 58.3936 283.075 58.3936 292.752C58.3936 301.814 59.6224 310.416 62.08 318.557C64.5376 326.544 68.1472 333.61 72.9088 339.754C77.824 345.744 83.8144 350.506 90.88 354.038C98.0992 357.571 106.394 359.338 115.763 359.338C121.446 359.338 126.131 358.723 129.818 357.494C133.658 356.266 136.653 354.576 138.803 352.426C141.107 350.275 142.643 347.818 143.411 345.053C144.333 342.288 144.794 339.37 144.794 336.298V312.106C144.794 309.648 144.179 308.035 142.95 307.267C141.875 306.499 140.109 305.962 137.651 305.654L121.062 304.042V296.899C133.043 297.514 144.717 297.821 156.083 297.821C167.45 297.821 179.123 297.514 191.104 296.899V304.042ZM284.528 367.402C273.161 367.402 262.486 365.712 252.502 362.333C242.672 358.8 234.07 353.885 226.697 347.587C219.324 341.136 213.488 333.379 209.187 324.317C205.04 315.254 202.966 305.194 202.966 294.134C202.966 282.768 205.116 272.4 209.417 263.03C213.872 253.661 219.862 245.674 227.388 239.069C234.915 232.464 243.67 227.395 253.654 223.862C263.792 220.176 274.544 218.333 285.91 218.333C297.43 218.333 308.028 220.253 317.705 224.093C327.536 227.933 336.06 233.232 343.28 239.99C350.499 246.595 356.105 254.506 360.099 263.722C364.246 272.784 366.32 282.691 366.32 293.443C366.32 304.195 364.323 314.102 360.329 323.165C356.489 332.227 350.96 340.061 343.74 346.666C336.675 353.117 328.073 358.186 317.936 361.872C307.952 365.558 296.816 367.402 284.528 367.402ZM236.374 295.286C236.374 303.12 237.449 310.877 239.6 318.557C241.904 326.083 245.206 332.842 249.507 338.832C253.808 344.822 258.953 349.661 264.944 353.347C271.088 357.034 278.076 358.877 285.91 358.877C301.116 358.877 312.79 353.501 320.931 342.749C329.225 331.997 333.372 316.022 333.372 294.826C333.372 285.763 332.374 277.162 330.377 269.021C328.38 260.88 325.308 253.814 321.161 247.824C317.168 241.68 312.099 236.842 305.955 233.309C299.811 229.622 292.668 227.779 284.528 227.779C276.233 227.779 269.014 229.699 262.87 233.539C256.88 237.379 251.888 242.448 247.894 248.746C244.054 255.043 241.136 262.262 239.139 270.403C237.296 278.544 236.374 286.838 236.374 295.286Z"
+                            fill="black" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_14_39">
+                            <rect width="390" height="390" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+        </h1>
+        <!-- 三條線漢堡按鈕 -->
+        <div class="navbar">
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </button>
-        </form>
-        <!--裝飾花-->
-        <div class="flower_r"><img src="./images/flower_r.png" alt="裝飾紅花"></div>
-        <div class="flower_w"><img src="./images/flower_w.png" alt="裝飾白花"></div>
-        <div></div>
-    </section>
-</main>
-<footer></footer>
+            <!-- 選單列 -->
+            <nav class="navigation">
+                <!-- icon btn | ul.icon>li*3>a -->
+                <ul class="icon">
+                    <li><a class="icon-fb" href="#"></a></li>
+                    <li><a class="icon-ig" href="#"></a></li>
+                    <li><a class="icon-line" href="#"></a></li>
+                    <li><a class="btn-s" href="./login.html">LOGIN</a></li>
+                </ul>
+                <!-- main btn | ul.icon>li*6>a-->
+                <ul>
+                    <ul class="menu">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">NEWS</a></li>
+                        <li><a href="#">SERVICE</a></li>
+                        <li><a href="#">VIDEO</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+    <!-- 內容區 -->
+    <main>
+        <section id="banner">
+            <div class="content-slider">
+                <!-- 讓js換圖片的切換器(隱藏狀態) -->
+                <input type="radio" id="banner1" class="sec-1-input" name="banner" checked>
+                <input type="radio" id="banner2" class="sec-1-input" name="banner">
+                <input type="radio" id="banner3" class="sec-1-input" name="banner">
+                <input type="radio" id="banner4" class="sec-1-input" name="banner">
+                <input type="radio" id="banner5" class="sec-1-input" name="banner">
+                <div class="slider">
+                    <!-- 輪播圖區 -->
+                    <div id="top-banner-1" class="banner">
+                        <div class="banner-inner-wrapper">
+                            <h2>Creative Template</h2>
+                            <h1>Welcome<br>to MoGo</h1>
+                            <div class="line"></div>
+                            <div class="learn-more-button"><a href="#section-2">Learn More</a></div>
+                        </div>
+                    </div>
+                    <div id="top-banner-2" class="banner">
+                        <div class="banner-inner-wrapper">
+                            <h2>What We Do</h2>
+                            <h1>Great<br>MoGo</h1>
+                            <div class="line"></div>
+                            <div class="learn-more-button"><a href="#section-4">Learn More</a></div>
+                        </div>
+                    </div>
+                    <div id="top-banner-3" class="banner">
+                        <div class="banner-inner-wrapper">
+                            <h2>Here We Are</h2>
+                            <h1>We Are<br>MoGo</h1>
+                            <div class="line"></div>
+                            <div class="learn-more-button"><a href="#section-6">Learn More</a></div>
+                        </div>
+                    </div>
+                    <div id="top-banner-4" class="banner">
+                        <div class="banner-inner-wrapper">
+                            <h2>Our Contacts</h2>
+                            <h1>Welcome<br>to MoGo</h1>
+                            <div class="line"></div>
+                            <div class="learn-more-button"><a href="#main-footer">Learn More</a></div>
+                        </div>
+                    </div>
+                    <div id="top-banner-5" class="banner">
+                        <div class="banner-inner-wrapper">
+                            <h2>Our Contacts</h2>
+                            <h1>Welcome<br>to MoGo</h1>
+                            <div class="line"></div>
+                            <div class="learn-more-button"><a href="#main-footer">Learn More</a></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 輪播張數提示器 -->
+                <nav>
+                    <div class="controls">
+                        <label for="banner1">
+                            <span class="progressbar">
+                                <span class="progressbar-fill"></span>
+                            </span>
+                        </label>
+                        <label for="banner2">
+                            <span class="progressbar">
+                                <span class="progressbar-fill"></span>
+                            </span>
+                        </label>
+                        <label for="banner3">
+                            <span class="progressbar">
+                                <span class="progressbar-fill"></span>
+                            </span>
+                        </label>
+                        <label for="banner4">
+                            <span class="progressbar">
+                                <span class="progressbar-fill"></span>
+                            </span>
+                        </label>
+                        <label for="banner5">
+                            <span class="progressbar">
+                                <span class="progressbar-fill"></span>
+                            </span>
+                        </label>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        <section id="news">
+            <header class="title">
+                <h2>NEWS</h2>
+                <h3>最新消息</h3>
+            </header>
+            <div class="box__list">
+                <article class="item">
+                    <a href="">
+                        <figure><img src="./images/pt_news1.jpg" alt=""></figure>
+                        <div class="content">
+                            <h1>NEWS TITLE</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa facilis aut incidunt,
+                                numquam maiores sint dicta vel soluta voluptatum ex facere excepturi eum sed rem aliquid
+                                sunt at itaque repellat.</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="item">
+                    <a href="">
+                        <figure><img src="./images/pt_news2.jpg" alt=""></figure>
+                        <div class="content">
+                            <h1>NEWS TITLE</h1>
+                            <p>Sundia Floral
+                                Design桑迪亞花藝設計，以太陽花的英文sunflower命名，1989年成立，經營近三十年，始終堅信著太陽花的花語「勇敢追求自己想要的幸福」，決定於2019年轉型並重新出發，持續追求我們的夢想，希望將這份熱情與樂觀帶給每一個人。提供花藝設計、會場佈置、空間設計、花藝課程、鮮花、乾燥花、永生花、客製化設計，以及國內送花。傾聽顧客的聲音，並將想訴說的情感傳遞出去是我們最期望完成的事。
+                            </p>
+                        </div>
+                    </a>
+                </article>
+                <article class="item">
+                    <a href="">
+                        <figure><img src="./images/pt_news3.jpg" alt=""></figure>
+                        <div class="content">
+                            <h1>NEWS TITLE</h1>
+                            <p>捧花、手腕花、頭冠花設計，在世界的角落，我們擁有了彼此。有時候覺得很不可思議，因為在熙來攘往的人群中，遇見了你，讓我們一起幸福的走下去吧！<br>Bouquets, wrist
+                                flowers, crown flower designs, in this corner of the world, we have each other.
+                                Sometimes I feel incredible, because I met you in the bustling crowd, let's go on
+                                happily together!</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <a class="btn-s" href="#">more</a>
+        </section>
+        <section id="service">
+            <header class="title">
+                <h2>SERVICE</h2>
+                <h3>服務項目</h3>
+            </header>
+            <ul class="box__list">
+                <li class="item svc-1">
+                    <a href="#" class="content">
+                        <h1>SERVICE TITLE</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, repudiandae. Eaque dolorum
+                            sed architecto, velit reprehenderit porro id dicta qui harum laudantium assumenda quasi
+                            ducimus debitis, sit, ad unde iure?</p>
+                    </a>
+                </li>
+                <li class="item svc-2">
+                    <a href="#" class="content">
+                        <h1>SERVICE TITLE</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, repudiandae. Eaque dolorum
+                            sed architecto, velit reprehenderit porro id dicta qui harum laudantium assumenda quasi
+                            ducimus debitis, sit, ad unde iure?</p>
+                    </a>
+                </li>
+                <li class="item svc-3">
+                    <a href="#" class="content">
+                        <h1>SERVICE TITLE</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, repudiandae. Eaque dolorum
+                            sed architecto, velit reprehenderit porro id dicta qui harum laudantium assumenda quasi
+                            ducimus debitis, sit, ad unde iure?</p>
+                    </a>
+                </li>
+                <li class="item svc-4">
+                    <a href="#" class="content">
+                        <h1>SERVICE TITLE</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, repudiandae. Eaque dolorum
+                            sed architecto, velit reprehenderit porro id dicta qui harum laudantium assumenda quasi
+                            ducimus debitis, sit, ad unde iure?</p>
+                    </a>
+                </li>
+            </ul>
+            <a class="btn-s" href="#">more</a>
+        </section>
+        <section id="video">
+            <header class="title">
+                <h2>VIDEO</h2>
+                <h3>相關影片</h3>
+            </header>
+            <div class="video">
+                <video src="./images/Planter.mp4" poster="./images/cover.jpg"></video>
+            </div>
+        </section>
+        <section id="about">
+            <div class="content">
+                <header class="title">
+                    <h2>ABOUT</h2>
+                    <h3>關於我們</h3>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore maiores blanditiis, amet laborum
+                    facere sequi, fugit minus sit magnam molestias delectus, numquam vero mollitia est nisi veniam
+                    eligendi voluptas eaque consequatur rerum minima? Rem corporis possimus sit dolorum labore corrupti
+                    asperiores laboriosam, ipsum necessitatibus minus eos officia beatae exercitationem iste, nesciunt
+                    natus repellendus eum est architecto assumenda ratione? Dolore magni tempora possimus quis
+                    blanditiis corrupti accusamus eligendi soluta incidunt. Doloremque nam sequi libero velit
+                    praesentium molestiae ratione quia, culpa totam voluptatem dolores animi architecto optio quasi
+                    omnis aut ea quae maxime itaque reprehenderit! Velit reprehenderit necessitatibus ducimus, error
+                    sunt aliquam amet ipsam veritatis provident animi voluptatum itaque aliquid eaque, excepturi atque
+                    ab? In a quidem, quisquam, fugiat saepe nostrum laudantium est mollitia natus similique accusantium
+                    harum voluptates dicta ipsam sapiente id nisi quaerat hic? Quam rem unde doloremque non id dolorum
+                    omnis ab aliquam doloribus error numquam minima eaque tempora, quas repudiandae repellat aut. Quos
+                    recusandae quod facere accusantium eum at consequuntur repellendus saepe? Magnam fuga quo labore
+                    quibusdam quod nobis dolore, eos reiciendis quis maiores a dolores nemo sunt cumque earum enim
+                    facilis provident iste doloremque id. Magni illum culpa nobis harum ab quod nam cumque corrupti,
+                    delectus voluptatum! Voluptatum iure asperiores consequuntur amet tempora magni repudiandae
+                    nesciunt, quis voluptatibus architecto eaque fugit impedit natus obcaecati dignissimos ex molestias
+                    sed ut. Ut aspernatur minima, adipisci modi ullam ea dolores iusto provident. Harum eius nesciunt
+                    fuga consequatur quam aut alias necessitatibus, soluta architecto veritatis distinctio eaque
+                    doloremque consectetur aliquam cum beatae odit autem tempore tenetur iure iste ipsum velit modi
+                    voluptatum! Veritatis porro facere culpa molestias autem explicabo rerum vel, obcaecati voluptate
+                    iste enim dolore repudiandae inventore harum laborum nam molestiae quaerat omnis alias impedit ab.
+                    Iusto dolores temporibus voluptatum consectetur, distinctio repudiandae ipsam doloremque laudantium
+                    aperiam, possimus repellendus? Debitis sint odio cumque sequi quod assumenda? Architecto earum,
+                    necessitatibus laudantium fugit alias impedit, dicta mollitia repellat illo nobis neque enim
+                    voluptatem, facilis laboriosam dolorem tenetur? Dignissimos sint numquam in qui molestias nihil, vel
+                    voluptatem vitae quaerat accusantium laborum minus, pariatur eaque laudantium nam velit recusandae
+                    commodi laboriosam totam! Similique voluptas maxime, deleniti doloremque optio nemo quisquam
+                    distinctio magni nulla fugiat architecto soluta odio deserunt, obcaecati odit in esse adipisci eos
+                    officiis! Delectus maxime libero velit, repellendus quae iure voluptate corporis rerum consequuntur
+                    aliquid dolore blanditiis ipsam provident quam fugiat pariatur? Repellat sunt, molestiae, quasi
+                    suscipit architecto, tempora dolor repellendus ipsum soluta ducimus repudiandae? Hic totam tempora
+                    quaerat corrupti molestiae? Voluptatibus rem fuga amet reprehenderit similique odio ratione aperiam
+                    quo a quae veniam repellat ex incidunt facilis at assumenda, consequatur tempore voluptatem nihil
+                    culpa placeat! Doloribus officia sunt dolorum ratione, necessitatibus maxime enim dolores aperiam,
+                    itaque atque, iste hic mollitia fugit cum incidunt? Temporibus ad eligendi eaque cum et perferendis
+                    minus accusamus! Reprehenderit totam, veritatis maxime sapiente, quibusdam recusandae ullam maiores
+                    modi impedit voluptatem laborum dolore quaerat eum enim reiciendis labore veniam dolores eveniet
+                    numquam. Ducimus odit libero, nam est rem ipsam incidunt, distinctio dolor atque debitis amet
+                    suscipit. Incidunt, adipisci?</p>
+            </div>
+            <video src="./images/flower.mp4" autoplay muted loop></video>
+        </section>
+        <section id="contact">
+            <header class="title">
+                <h2>CONTACT</h2>
+                <h3>聯絡我們</h3>
+            </header>
+            <form action="" method="post" name="form--contact" id="form--contact" title="聯絡我們表單">
+                <label for="username">* 姓名 : </label>
+                <input type="text" name="username" id="username" title="姓名欄位" placeholder="請輸入姓名" required autocomplete>
+
+                <label for="tel">聯絡電話 : </label>
+                <input type="tel" name="tel" id="tel" title="聯絡電話欄位" placeholder="請輸入聯絡電話">
+
+                <label for="email">* Email : </label>
+                <input type="email" name="email" id="email" title="email欄位" placeholder="請輸入電子郵件信箱" required>
+
+                <label for="message">* 留言 : </label>
+                <textarea name="message" id="message" title="留言欄位" rows="10" cols="50"></textarea>
+                <small>此表單為練習作品，不具有蒐集資料的功能。</small>
+                <!-- 表單按鈕一定要放在 form 裡 -->
+                <button type="submit" name="btn__contact--submit" id="btn__contact--submit"
+                    title="送出按鈕"><span>送出</span></button>
+            </form>
+            <div class="flower_r"><img src="./images/flower_r.png" alt="裝飾紅花"></div>
+            <div class="flower_w"><img src="./images/flower_w.png" alt="裝飾白花"></div>
+        </section>
+    </main>
+    <footer>
+        <!-- LOGO區 -->
+        <div>
+            <h1 class="logo">
+                <a href="./index.html">
+                    <!-- <img src="./images/logo_b.svg" alt="Rita花室LOGO"> -->
+                    <svg width="100%" height="auto" viewBox="0 0 390 390" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_14_39)">
+                            <path
+                                d="M92.032 147.2C92.032 149.197 92.3392 150.733 92.9536 151.808C93.7216 152.73 95.5648 153.19 98.4832 153.19H120.832C123.75 153.19 127.053 153.037 130.739 152.73C134.579 152.269 138.573 151.117 142.72 149.274C147.021 147.277 151.322 144.282 155.622 140.288C160.077 136.141 164.301 130.381 168.294 123.008H171.981L165.299 163.098C158.848 162.79 150.4 162.56 139.955 162.406C129.51 162.253 116.608 162.176 101.248 162.176C85.888 162.176 73.216 162.253 63.232 162.406C53.4016 162.56 46.0288 162.79 41.1136 163.098V157.568L56.7808 154.573C60.7744 154.112 62.7712 152.499 62.7712 149.734V33.8432C62.7712 30.9248 62.2336 29.0816 61.1584 28.3136C60.0832 27.5456 58.624 26.9312 56.7808 26.4704L44.3392 23.4752V17.4848C52.6336 17.9456 65.0752 18.176 81.664 18.176C98.2528 18.176 108.544 17.9456 112.538 17.4848V23.4752L98.0224 26.4704C96.0256 26.9312 94.4896 27.5456 93.4144 28.3136C92.4928 28.928 92.032 30.7712 92.032 33.8432V147.2ZM281.396 165.402C270.029 165.402 259.354 163.712 249.37 160.333C239.54 156.8 230.938 151.885 223.565 145.587C216.192 139.136 210.356 131.379 206.055 122.317C201.908 113.254 199.834 103.194 199.834 92.1344C199.834 80.768 201.984 70.4 206.285 61.0304C210.74 51.6608 216.73 43.6736 224.256 37.0688C231.783 30.464 240.538 25.3952 250.522 21.8624C260.66 18.176 271.412 16.3328 282.778 16.3328C294.298 16.3328 304.896 18.2528 314.573 22.0928C324.404 25.9328 332.928 31.232 340.148 37.9904C347.367 44.5952 352.973 52.5056 356.967 61.7216C361.114 70.784 363.188 80.6912 363.188 91.4432C363.188 102.195 361.191 112.102 357.197 121.165C353.357 130.227 347.828 138.061 340.608 144.666C333.543 151.117 324.941 156.186 314.804 159.872C304.82 163.558 293.684 165.402 281.396 165.402ZM233.242 93.2864C233.242 101.12 234.317 108.877 236.468 116.557C238.772 124.083 242.074 130.842 246.375 136.832C250.676 142.822 255.821 147.661 261.812 151.347C267.956 155.034 274.944 156.877 282.778 156.877C297.984 156.877 309.658 151.501 317.799 140.749C326.093 129.997 330.24 114.022 330.24 92.8256C330.24 83.7632 329.242 75.1616 327.245 67.0208C325.248 58.88 322.176 51.8144 318.029 45.824C314.036 39.68 308.967 34.8416 302.823 31.3088C296.679 27.6224 289.536 25.7792 281.396 25.7792C273.101 25.7792 265.882 27.6992 259.738 31.5392C253.748 35.3792 248.756 40.448 244.762 46.7456C240.922 53.0432 238.004 60.2624 236.007 68.4032C234.164 76.544 233.242 84.8384 233.242 93.2864Z"
+                                fill="black" />
+                            <path
+                                d="M191.104 304.042L180.506 305.654C177.894 306.115 176.051 306.806 174.976 307.728C174.054 308.496 173.594 309.955 173.594 312.106V337.68C173.594 342.134 173.44 345.59 173.133 348.048C172.979 350.352 172.442 352.272 171.52 353.808C170.752 355.19 169.446 356.342 167.603 357.264C165.76 358.032 163.226 359.03 160 360.259C156.928 361.488 153.395 362.563 149.402 363.485C145.562 364.406 141.414 365.251 136.96 366.019C132.506 366.634 127.898 367.094 123.136 367.402C118.528 367.709 114.074 367.862 109.773 367.862C98.4064 367.862 87.5776 366.326 77.2864 363.254C66.9952 360.029 58.0096 355.344 50.3296 349.2C42.6496 343.056 36.5056 335.53 31.8976 326.621C27.4432 317.558 25.216 307.19 25.216 295.517C25.216 282 27.6736 270.403 32.5888 260.726C37.6576 250.896 44.3392 242.832 52.6336 236.534C60.928 230.083 70.528 225.398 81.4336 222.48C92.3392 219.408 103.782 217.872 115.763 217.872C136.192 217.872 153.242 221.558 166.912 228.931L168.755 267.638L163.226 268.33C160.922 262.646 158.234 257.347 155.162 252.432C152.243 247.363 148.864 242.986 145.024 239.299C141.184 235.459 136.73 232.464 131.661 230.314C126.746 228.163 121.216 227.088 115.072 227.088C105.395 227.088 96.9472 228.701 89.728 231.926C82.6624 235.152 76.8256 239.683 72.2176 245.52C67.6096 251.203 64.1536 258.115 61.8496 266.256C59.5456 274.243 58.3936 283.075 58.3936 292.752C58.3936 301.814 59.6224 310.416 62.08 318.557C64.5376 326.544 68.1472 333.61 72.9088 339.754C77.824 345.744 83.8144 350.506 90.88 354.038C98.0992 357.571 106.394 359.338 115.763 359.338C121.446 359.338 126.131 358.723 129.818 357.494C133.658 356.266 136.653 354.576 138.803 352.426C141.107 350.275 142.643 347.818 143.411 345.053C144.333 342.288 144.794 339.37 144.794 336.298V312.106C144.794 309.648 144.179 308.035 142.95 307.267C141.875 306.499 140.109 305.962 137.651 305.654L121.062 304.042V296.899C133.043 297.514 144.717 297.821 156.083 297.821C167.45 297.821 179.123 297.514 191.104 296.899V304.042ZM284.528 367.402C273.161 367.402 262.486 365.712 252.502 362.333C242.672 358.8 234.07 353.885 226.697 347.587C219.324 341.136 213.488 333.379 209.187 324.317C205.04 315.254 202.966 305.194 202.966 294.134C202.966 282.768 205.116 272.4 209.417 263.03C213.872 253.661 219.862 245.674 227.388 239.069C234.915 232.464 243.67 227.395 253.654 223.862C263.792 220.176 274.544 218.333 285.91 218.333C297.43 218.333 308.028 220.253 317.705 224.093C327.536 227.933 336.06 233.232 343.28 239.99C350.499 246.595 356.105 254.506 360.099 263.722C364.246 272.784 366.32 282.691 366.32 293.443C366.32 304.195 364.323 314.102 360.329 323.165C356.489 332.227 350.96 340.061 343.74 346.666C336.675 353.117 328.073 358.186 317.936 361.872C307.952 365.558 296.816 367.402 284.528 367.402ZM236.374 295.286C236.374 303.12 237.449 310.877 239.6 318.557C241.904 326.083 245.206 332.842 249.507 338.832C253.808 344.822 258.953 349.661 264.944 353.347C271.088 357.034 278.076 358.877 285.91 358.877C301.116 358.877 312.79 353.501 320.931 342.749C329.225 331.997 333.372 316.022 333.372 294.826C333.372 285.763 332.374 277.162 330.377 269.021C328.38 260.88 325.308 253.814 321.161 247.824C317.168 241.68 312.099 236.842 305.955 233.309C299.811 229.622 292.668 227.779 284.528 227.779C276.233 227.779 269.014 229.699 262.87 233.539C256.88 237.379 251.888 242.448 247.894 248.746C244.054 255.043 241.136 262.262 239.139 270.403C237.296 278.544 236.374 286.838 236.374 295.286Z"
+                                fill="black" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_14_39">
+                                <rect width="390" height="390" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+            </h1>
+            <!-- 選單列 -->
+            <nav class="navigation">
+                <!-- main btn | ul.icon>li*6>a-->
+                <ul>
+                    <ul class="menu">
+                        <li><a href="#">HOME</a></li>
+                        <li>
+                            <a href="#">NEWS</a>
+                            <ul class="submenu">
+                                <li><a href="#">媒體報導</a></li>
+                                <li><a href="#">優惠活動</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">SERVICE</a>
+                            <ul class="submenu">
+                                <li><a href="#">服務1</a></li>
+                                <li><a href="#">服務2</a></li>
+                                <li><a href="#">服務3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">VIDEO</a></li>
+                        <li><a href="#">ABOUT</a>
+                            <ul class="submenu">
+                                <li><a href="#">品牌故事</a></li>
+                                <li><a href="#">公司歷史</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">CONTACT</a>
+                            <ul class="submenu">
+                                <li><a href="#">聯絡方式</a></li>
+                                <li><a href="#">交通路線</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </ul>
+            </nav>
+        </div>
+        <small>copyright&copy; RITA'S FLOWERS.</small>
+    </footer>
+    <!-- 頁尾區 -->
+
+    <!-- 需先載入jquery原始碼，讓瀏覽器讀懂 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> <!-- jquery官網CDN -->
+    <script src="./js/carousel.js"></script>
+    <!-- 自訂的js一定要寫在最底下=>最後執行 -->
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

@@ -1,53 +1,85 @@
-@charset "UTF-8";/* 一定要在第一行 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');/*google font一定要在第二行*/
-@font-face {
-    font-family: JerseyLetters;
-    src: url(../webfonts/JerseyLetters.ttf);
-}
-:root{
-    /*灰階*/
-    --deep:#444;
-    --grey:#999;
-    --light:#f1f1f1;
-    /*背景*/
-    --primary:#f2edf0;
-    --secondary:#e6ece5;
-    --tertiary:#ecf0f4;
-    /*輔助*/
-    --lesser-1:#f3e4e4;
-    --lesser-2:#efdbdb;
-    --lesser-3:#cdaaab;
-    --lesser-4:#8f6b6d;
-    /*透明*/
-    --alpha-w-60:rgba(255,255,255,.6);
-    --alpha-b-20:rgba(0,0,0,.2);
-    --alpha-b-40:rgba(0,0,0,.4);
-    --alpha-r-20:rgba(220,185,185,0.2);
-    /*漸層*/
-    --gradient-w-a:rgba(255,255,255,0.15),rgba(255,255,255,0.5);
-    /*陰影*/
-    --box-shadow-g:2px 2px 3px rgba(0,0,0,.15),
-        inset -1px -1px rgba(255,255,255,.8);
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Shrikhand&&family=Lobster&family=Noto+Sans+TC:wght@100..900&display=swap');
+/*UTF-8 一定要在第一行*/
+/* google fonts 一定要在第二行 */
 
+@font-face {
+    font-family: LemonMilk;
+    src: url(../fonts/LemonMilk/LemonMilk.otf);
 }
-/* 重置所有標籤的樣式 */
+
+:root {
+    /* 灰階 */
+    --deep: #444;
+    --grey: #999;
+    --light: #f1f1f1;
+
+    /* 背景 */
+    --primary: #f2edf0;
+    --secondary: #e6ece5;
+    --tertiary: #ecf0f4;
+
+    /* 輔助 */
+    --lesser-1: #f3e4e4;
+    --lesser-2: #efdbdb;
+    --lesser-3: #cdaaab;
+    --lesser-4: #8f6b6d;
+    --lesser-5: #8f6b6d;
+
+    /* 透明 */
+    --alpha-w-40: rgba(255, 255, 255, .4);
+    --alpha-w-60: rgba(255, 255, 255, .6);
+    --alpha-b-20: rgba(0, 0, 0, .2);
+    --alpha-b-40: rgba(0, 0, 0, .4);
+    --alpha-r-20: rgba(220, 185, 185, .2);
+}
+
+/* 卷軸樣式 */
+::-webkit-scrollbar {
+    /* 滾動條/卷軸基底 */
+    width: 10px;
+    height: 10px;
+    background-color: var(--lesser-1);
+}
+
+::-webkit-scrollbar-button {
+    /* 卷軸上的按鈕(上下箭頭) */
+    background-color: var(--lesser-3);
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    /* 滾動條的軌跡 */
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    /* 可拖曳滾動手把 */
+    background: #baa3a3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #947979;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*不累加內距paddind=g及邊框border*/
+    /*不累加內矩(padding)與邊框(border)*/
 }
 
 /* 重置字體 */
 body {
     font-family:
-        /*西文*/
+        /*外文*/
         -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
         /*中文*/
         "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
     font-size: 100%;
     line-height: 1.5;
-    /* background-color: antiquewhite; */
+    /* background-color: */
 }
 
 /* 重置標題 */
@@ -77,69 +109,72 @@ img {
 /* 重置連接 */
 a {
     display: block;
-    /*將預設inline改為block*/
     text-decoration: none;
     color: var(--deep);
 }
 
-/*共用區*/
-
+/* 共用區 */
 .btn-s {
-    background-color: var(--light);
-    color: var(--deep);
+    background-color: white;
     width: auto !important;
-    height: 35px;
-    line-height: 30px;
-    padding: 0 20px;
+    height: 40px;
+    line-height: 38px;
+    padding: 0 30px;
     border-radius: 99px;
+    /*圓角:height除2*/
     transition: .35s ease-in-out;
 }
 
 .btn-s:hover {
-    background-color:var(--deep);;
-    color: var(--light);
+    background-color: var(--deep);
+    color: white;
 }
 
-#form--contact input,
-#form--contact textarea,
-#topbar .menu {
-    background-image: linear-gradient(150deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.9));
-    box-shadow: 2px 3px rgba(0, 0, 0, 0.15), inset -1px -1px rgba(255, 255, 255, .8);
-    /* filter:drop-shadow(2px 3px rgba(0,0,0,0.6)) ; */
-    backdrop-filter: blur(5px);
-}
-
-/*頁首區*/
-/* position的權重>display */
+/* 頁首區 */
 #topbar {
-    position: fixed;/*固定定位:不會跟著卷軸走*/
+    position: fixed;
     z-index: 999;
-    width:100%;/*定位會變成抓內容的尺寸，所以要手動設定回w100%*/
+    width: 100%;
     display: flex;
-    /*預設主軸為水平*/
+    /*預設主軸水平*/
     justify-content: space-between;
-    /*主軸(水平)均分貼齊頭尾*/
+    /*主軸(水平)均分貼齊頭*/
     align-items: center;
-    /*副軸(垂直置中)*/
+    /*副軸(垂直)置中*/
     padding: 30px;
-    /* background-color: rgb(237, 226, 227); */
 }
 
 .logo {
     width: 65px;
-    /*相對於父元素*/
 }
 
-.logo svg {
-    filter: drop-shadow(2px 2px var(--alpha-w-60));
+.navbar {
+    display: flex;
+    flex-direction: column;
+    /* 主軸:垂直 */
+    align-items: flex-end;
+    /* 副軸(水平):置底(靠右) */
 }
 
+/* 漢堡按鈕區 */
+.hamburger {
+    background-color: transparent;
+    border: none;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--deep);
+    margin: 5px auto;
+}
+
+/* 主要選單區 */
 .navigation {
     display: flex;
     flex-direction: column;
-    /*主軸垂直*/
     align-items: flex-end;
-    /*副軸(水平)置底*/
 }
 
 .navigation .icon {
@@ -147,18 +182,19 @@ a {
 }
 
 .navigation .icon a {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     margin-left: 10px;
     transition: all .35s ease-in-out;
 }
 
 .icon-fb {
-    /*只有svg圖繪自動等比例縮放，其他圖檔原始尺寸*/
     background-image: url(../images/icon-fb.svg);
+    /*只有svg圖會自動等比例縮放，其他圖檔會原始尺寸匯入*/
 }
 
 .icon-fb:hover {
+    /*滑鼠放上去後的特效*/
     background-image: url(../images/icon-fb-hover.svg);
 }
 
@@ -182,33 +218,53 @@ a {
     display: flex;
     margin: 15px 0;
     /*控制父層的外距*/
-    padding: 10px;
+    padding: 15px;
     border-radius: 99px;
 }
 
 .navigation .menu li {
-    border-right: solid 1px #76716c;
+    border-right: solid 1px;
 }
 
 .navigation .menu li:last-child {
-    border-right: none;
+    border: none;
 }
 
 .navigation .menu a {
-    color: #76716c;
     font-size: .9rem;
     line-height: 1;
+    /*原本設定1.5倍行高，設定line-height調整分隔線長度*/
     margin: 0 20px;
-    /*控制子層的外距*/
-    border-bottom: solid 5px transparent;
+    border-bottom: solid 2px transparent;
 }
 
 .navigation .menu a:hover {
-    border-bottom: solid 2px #76716c;
+    border-bottom: solid 2px;
     transition: .35s ease-in-out;
 }
 
-/*主要內容共用區*/
+@media(min-width:641px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+@media(max-width:640px) {
+    .navigation .menu {
+        flex-direction: column;
+        border-radius: 15px;
+    }
+
+    .navigation .menu li {
+        border-right: none;
+    }
+
+    .navigation .menu a {
+        margin: 15px;
+    }
+}
+
+/* 主頁共用區 */
 section {
     display: flex;
     flex-direction: column;
@@ -225,173 +281,309 @@ section {
 }
 
 .title h2 {
-    font-family: JerseyLetters, sans-serif;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
     font-size: 2rem;
-    letter-spacing: .2rem;
+    letter-spacing: .3rem;
     border-bottom: 2px solid var(--deep);
-    /* font-weight: bold; 字粗細 */
 }
 
 .title h3 {
     font-family: "Noto Sans TC", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 300;
-    font-size: 1.2rem;
-    letter-spacing: .3rem;
-    line-height: 2.5rem;
+    font-weight: 400;
+    font-style: 1.2rem;
+    letter-spacing: .2rem;
+    line-height: 3rem;
 }
 
-.box_list{
+.box__list {
     width: 80%;
-    max-width: 1440px;/*通常搭配相對單位，設定絕對單位*/
+    max-width: 1400px;
     display: flex;
+    margin-bottom: 70px;
 }
-.box_list .item{
+
+.box__list .item {
     flex: 1;
+    /*平板以上有交換主軸方向，flex權重>寬高*/
     margin: 0 15px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, .20);
+    box-shadow: 3px 3px 8px #898989;
     border-radius: 20px;
     overflow: hidden;
+}
 
+.box__list figure {
+    height: 35vh;
 }
-.box_list figure{
-    height: 40vh;
+
+.box__list img {
+    object-fit: cover;
+    height: 100%;
 }
-.box_list img{
-    object-fit: cover;/*object-fit有自動置中的效果*/
-    /*width:100%;共用區已設定*/
-    height:100%;
+
+.box__list .content {
+    padding: 15px 28px;
 }
-.box_list .content{
-    padding: 15px 20px;
-}
-.box_list h1{
-    font-size: 1.2rem;
+
+.box__list h1 {
+    font-size: 1.3rem;
     font-weight: 600;
 }
-.box_list p{
+
+.box__list p {
     font-size: .9rem;
-    text-align: justify;/*齊行-建議中文使用 英文是單字間距均分，建議不要用*/
-}
+    text-align: justify;
+    /*齊行，建議中文內容時使用，英文是單字間距均分，建議不使用*/
 
-/*最新消息區*/
-#news{
-    background-color: var(--primary);
-}
-#news .content{
-    background-color: var(--alpha-w-60);
-    transition: .4s;
-}
-#news .content:hover{
-    background-color: var(--light);
-}
-#news p{
-    /*多行省略語法*/
-    overflow: hidden;
-    text-overflow:ellipsis; /*文字溢出時出現省略號，若有設定line-clamp時，瀏覽器會自動加入*/
-    display:-webkit-box; /*彈性布局*/
-    -webkit-box-orient: vertical; /*定義box垂直布局*/
-    -webkit-line-clamp: 5; /*限制行數*/
-}
-
-/*服務項目區*/
-#service{
-    background-color: var(--secondary);
-}
-#service p{
-    /*單行省略*/
+    /* 多行省略 */
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    /*文字溢出出現省略號時，若有設定line-clamp時，瀏覽器會自動加入*/
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    /*限制顯示的文字行數*/
 }
-#service .content:hover{
+
+/* 最新消息區*/
+#news {
+    background-color: var(--primary);
+}
+
+#news .item:hover {
     background-color: var(--lesser-1);
+    transition: .4s;
 }
-#service .item{
+
+#news p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*文字溢出時出現省略號*/
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    /*定義box垂直布局*/
+    -webkit-line-clamp: 5;
+    /*限制行數*/
+}
+
+/* 中型設備(ipad air) */
+@media(max-width:820px) {
+    #news .item:last-child {
+        display: none;
+    }
+}
+
+@media(min-width:821px) {
+    #news .btn-s {
+        display: none;
+    }
+}
+
+/* 小型設備 */
+@media(max-width:640px) {
+    #news .item:nth-child(n+2) {
+        display: none;
+    }
+}
+
+/* 服務項目 */
+#service p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    -webkit-line-clamp: 1;
+}
+
+#service .item {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 65vh;
+    height: 60vh;
+    /*平板以上有交換主軸方向，flex權重>寬高*/
     background-position: center;
     background-size: cover;
+    transition: .4s;
 }
-#service a{
-    width: 100%;/*被父元素的flex若為row，則寬度抓內容尺寸，所以要手動寫回w100%*/
-    /* opacity: .5; 整個物件變透明(文字.照片)*/
+
+#service .content:hover {
+    background-color: var(--alpha-w-60);
+}
+
+#service a {
+    width: 100%;
     color: white;
-    background-color: rgba(0, 0, 0, .4);/*直接用rgba調透明度*/
+    background-color: rgba(0, 0, 0, .4);
 }
-.svc-1{
+
+#service a:hover {
+    color: var(--deep);
+}
+
+.svc-1 {
     background-image: url(../images/pt_svc1.jpg);
 }
-.svc-2{
+
+.svc-2 {
     background-image: url(../images/pt_svc2.jpg);
 }
-.svc-3{
+
+.svc-3 {
     background-image: url(../images/pt_svc3.jpg);
 }
-.svc-4{
+
+.svc-4 {
     background-image: url(../images/pt_svc4.jpg);
 }
-/*相關影片區*/
-#video{
-    background-color: var(--tertiary);
+
+/* 平板以上尺寸 */
+@media(min-width:821px) {
+    #service .btn-s {
+        display: none;
+    }
 }
-.video{
+
+@media(max-width:820px) {
+    #service .box__list {
+        flex-direction: column;
+        height: 60vh;
+        /*flex:1高度均分時，父元素預設為抓內容尺寸，需另外設定高度使其有空間均分*/
+    }
+
+    #service .item {
+        margin-bottom: 30px;
+    }
+
+    #service .item:nth-child(n+3) {
+        display: none;
+    }
+}
+
+/* 影片 */
+#video {
+    background-color: var(--secondary);
+}
+
+.video {
     width: 65%;
     max-width: 1050px;
 }
-video{
+
+video {
     width: 100%;
 }
-/*關於我們區*/
-#about .content{
-    width: 65%;
-    height: 100vh;/*高度100%，是抓父元素的相對高度*/
-    background-color: var(--alpha-b-40);
-    display: flex;/*flex強制致中*/
-    flex-direction: column;/*垂直*/
-    justify-content: center;/*置中*/
-    align-items: center;
-}
-#about p {
-    width:90%;
-    height: 65vh;
-    overflow:auto;
-}
-/*聯絡我們區*/
-#contact {
-    position: relative;/*專門作為absolute的依據*/
-    overflow: clip;
-    /*背景影像基本設定*/
-    background-image: url(../images/bg_contact.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /*固定背景*/
-    background-attachment: fixed;
+
+@media(max-width:820px) {
+    #video {
+        height: auto;
+        /* 取消桌機板的100vh */
+        padding: 5vh 0;
+    }
 }
 
-/*裝飾花*/
-.flower_r{
-    position:absolute;/*絕對定位*/
-    left: -30px;
-    bottom: -50px;
-    width: 300px;
-    transform: rotate(30deg);
+/* 關於我們 */
+#about {
+    position: relative;
+    background-color: var(--alpha-r-20);
 }
-.flower_w{
-    position:absolute;
-    right: -30px;
-    top: 50px;
-    width: 300px;
-    transform: rotate(-30deg);
-}
-#form--contact {
-    font-family: 'Noto Sans TC', sans-serif;
+
+#about .content {
+    position: absolute;
+    z-index: 1;
+    width: 65%;
+    height: 100%;
+    background-color: var(--alpha-r-20);
     display: flex;
-    flex-direction: column; /*主軸(垂直)*/
-    align-items: center; /*副軸(水平)置中*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+#about p {
+    width: 85%;
+    height: 65vh;
+    padding-right: 1rem;
+    overflow: auto;
+}
+
+#about video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: overlay;
+    filter: opacity(50%) brightness(120%) contrast(60%);
+}
+
+@media(max-width:820px) {
+    #about {
+        height: 80vh;
+    }
+
+    #about .content {
+        width: 85%;
+    }
+
+    #about p {
+        height: 55vh;
+    }
+}
+
+/* 區塊卷軸 */
+#about p::-webkit-scrollbar {
+    /* 滾動條/卷軸基底 */
+    background-color: transparent;
+}
+
+#about p::-webkit-scrollbar-button {
+    /* 卷軸上的按鈕(上下箭頭) */
+    display: none;
+}
+
+#about p::-webkit-scrollbar-track {
+    /* 滾動條的軌跡 */
+    border-radius: 99px;
+}
+
+#about p::-webkit-scrollbar-thumb {
+    /* 可拖曳滾動手把 */
+    border-radius: 99px;
+}
+
+/* 聯絡我們 */
+#contact {
+    position: relative;
+    overflow: clip;
+    background-image: url(../images/bg_contact.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.flower_r {
+    position: absolute;
+    left: -50px;
+    bottom: -30px;
+    transform: rotate(40deg);
+    width: 300px;
+
+}
+
+.flower_w {
+    position: absolute;
+    right: -50px;
+    top: 70px;
+    transform: rotate(-30deg);
+    width: 300px;
+}
+
+#form--contact {
+    display: flex;
+    flex-direction: column;
+    /*主軸垂直*/
+    align-items: center;
+    /*副軸水平置中*/
     width: 35%;
 }
 
@@ -400,17 +592,29 @@ video{
     line-height: 2;
     margin-top: 1rem;
     width: 100%;
+    color: var(--deep);
+}
+
+#form--contact input,
+#form--contact textarea,
+#topbar .menu,
+#btn__contact--submit {
+    /*玻璃擬態效果*/
+    background-image: linear-gradient(150deg, rgba(252, 222, 222, 0.463), rgba(227, 213, 213, 0.282));
+
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .2), inset 0px 0px rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
 }
 
 #form--contact input,
 #form--contact textarea {
     width: 100%;
-    /*玻璃擬態效果*/
     border-radius: 10px;
+    font-family: 'Noto Sans TC', 'sans serif';
     padding: 6px;
-    color: #8f6b6d;
+    color: #876e6e;
     font-weight: 600;
-    /*取消表單元件的預設背景色*/
+    /*取消表單元件的預設值*/
     background-color: transparent;
     border: none;
 }
@@ -418,56 +622,56 @@ video{
 #form--contact input:focus,
 #form--contact textarea:focus {
     /*修改focus預設樣式*/
-    /* outline:none; */
-    outline: 1px solid #a37a7c
+    outline: 1px solid #aa9898;
 }
 
 #form--contact input::placeholder,
 #form--contact textarea::placeholder {
-    font-size: .75rem;
+    padding: .1rem;
+    color: #aa9898;
     font-weight: 400;
-    color: #a37a7c;
 }
 
 #form--contact small {
+    width: 100%;
     font-size: .8rem;
-    color: #ae9395;
-    padding: 15px 5px;
+    color: #786f6f;
+    padding: 8px 5px;
 }
 
 /*動態按鈕*/
-
-#btn_contact--submit  {
-    /*position: relative;
+#btn__contact--submit {
+    /* position: relative;
     outline: none;
-    text-decoration: none;取消文字裝飾底線*/
+    text-decoration: none; <= 取消文字裝飾底線 */
     border-radius: 50px;
-    /*定義起始位置*/
+    /* 定義起始位置 */
     display: flex;
     justify-content: center;
     align-items: center;
-    /*指標樣式*/
-    cursor: pointer;/*指標樣式:手型*/
-    /*text-transform: uppercase;設定字母大寫*/
+    /* 指標樣式 */
+    cursor: pointer;
+    /* text-transform: uppercase; <= 設定字母大寫*/
     height: 60px;
     width: 210px;
-    /*opacity: 1;透明度*/
+    opacity: 1;
     background-color: transparent;
-    border: none;
-}
-#btn_contact--submit  span {
-    color: #8f6b6d;
-    font-size: .8rem;
-    font-weight: 500;
-    letter-spacing: 1rem; /*每字左邊加字距*/
-    padding-left: 1rem; /*區塊置中時，因為字距部隊其，而補回字距的間距*/
+    border: 1px solid var(--lesser-3);
 }
 
-#btn_contact--submit:hover {
+#btn__contact--submit span {
+    color: #5c3e30;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1rem;
+    padding-left: 1rem;
+}
+
+#btn__contact--submit:hover {
     animation: rotate 0.7s ease-in-out both;
 }
 
-#btn_contact--submit:hover span {
+#btn__contact--submit:hover span {
     animation: storm 0.7s ease-in-out both;
     animation-delay: 0.06s;
 }
@@ -496,22 +700,90 @@ video{
 
 @keyframes storm {
     0% {
-        transform: translate3d(0, 0, 0) /*translateZ(0)*/;
+        transform: translate3d(0, 0, 0) translateZ(0);
     }
 
     25% {
-        transform: translate3d(4px, 0, 0) /*translateZ(0)*/;
+        transform: translate3d(4px, 0, 0) translateZ(0);
     }
 
     50% {
-        transform: translate3d(-3px, 0, 0) /*translateZ(0)*/;
+        transform: translate3d(-3px, 0, 0) translateZ(0);
     }
 
     75% {
-        transform: translate3d(2px, 0, 0) /*translateZ(0)*/;
+        transform: translate3d(2px, 0, 0) translateZ(0);
     }
 
     100% {
-        transform: translate3d(0, 0, 0) /*translateZ(0)*/;
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+}
+
+@media(max-width:820px) {
+    #form--contact {
+        width: 50%;
+    }
+}
+
+@media(max-width:640px) {
+
+    .flower_r,
+    .flower_w {
+        display: none;
+    }
+
+    #form--contact {
+        width: 60%;
+    }
+}
+
+/* footer區 */
+footer {
+    padding: 20px;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .navigation .menu {
+    margin: 0;
+    padding: 0;
+}
+
+footer .navigation .menu a {
+    font-weight: 700;
+}
+
+footer .navigation .menu li {
+    border: none;
+    margin: 10px 0;
+}
+
+/* 中型設備(ipad air) */
+@media(max-width:820px) {
+    footer {
+        text-align: center;
+    }
+
+    footer div {
+        display: none;
+    }
+}
+
+/* 小型設備 */
+@media(max-width:640px) {
+    #banner .content-slider .slider .banner .banner-inner-wrapper h1 {
+        font-size: 3.5rem;
+    }
+
+    #banner .content-slider .slider .banner .banner-inner-wrapper h2 {
+        font-size: 2rem;
+    }
+
+    #banner .content-slider nav .controls label {
+        margin: 0 5px;
     }
 }
