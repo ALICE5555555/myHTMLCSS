@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Shrikhand&&family=Lobster&family=Noto+Sans+TC:wght@100..900&display=swap');
 /*UTF-8 一定要在第一行*/
 /* google fonts 一定要在第二行 */
-
+/*   .→class #→id   */
 @font-face {
     font-family: LemonMilk;
     src: url(../fonts/LemonMilk/LemonMilk.otf);
@@ -129,6 +129,31 @@ a {
     background-color: var(--deep);
     color: white;
 }
+#gotop{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+
+    width: 50px;
+    height: 50px;
+    background-color: var(--lesser-5);
+    border-radius: 50%;
+    padding: 5px;
+
+    cursor: pointer;/*游標樣式:手指*/
+}
+
+#form--contact input,
+#form--contact textarea,
+#topbar .menu,
+#btn__contact--submit {
+    /*玻璃擬態效果*/
+    background-image: linear-gradient(150deg, rgba(252, 222, 222, 0.463), rgba(227, 213, 213, 0.282));
+
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .2), inset 0px 0px rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+}
 
 /* 頁首區 */
 #topbar {
@@ -168,6 +193,7 @@ a {
     height: 3px;
     background-color: var(--deep);
     margin: 5px auto;
+    transition: .35s;
 }
 
 /* 主要選單區 */
@@ -226,6 +252,7 @@ a {
     border-right: solid 1px;
 }
 
+
 .navigation .menu li:last-child {
     border: none;
 }
@@ -237,7 +264,68 @@ a {
     margin: 0 20px;
     border-bottom: solid 2px transparent;
 }
-
+@media(max-width:640px){
+    #topbar{
+        align-items: flex-start;
+    }
+    .hamburger .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--deep);
+        margin: 5px auto;
+        transition: .35s;
+    }
+    .hamburger.is-active .bar:nth-child(1){
+        transform: rotate(45deg) translateY(11px);
+    }
+    .hamburger.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.is-active .bar:nth-child(3){
+        transform: rotate(-45deg) translateY(-11px);
+    }
+    .navigation{
+        align-items: center;/*副軸(水平)置中*/
+        padding: 10px;
+        border-radius: 15px;
+        /*玻璃擬態效果*/
+        background-image: linear-gradient(150deg,var(--alpha-w-g));
+        box-shadow: var(--box-shadow-g);
+        backdrop-filter: blur(5px);
+        background-color: var(--alpha-w-60);
+        /*動畫效果*/
+        animation: hide .1s both;
+    }
+    .navigation.show{
+        display: flex;
+        /*動畫效果*/
+        animation: show .35s both;
+    }
+    @keyframes hide {
+        from{ opacity: 1;display: flex;}
+        to{ opacity: 0;display: none;}
+    }
+    @keyframes show {
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
+    .navigation .menu li {
+        border:none;
+    }
+    .navigation .menu a {
+        margin: 15px;
+    }
+    #topbar .menu{
+        flex-direction: column;
+        order: -1;
+        /*玻璃擬態效果*/
+        background-image: none;
+        box-shadow: none;
+        backdrop-filter: none;
+        background-color: transparent;
+    }
+}
 .navigation .menu a:hover {
     border-bottom: solid 2px;
     transition: .35s ease-in-out;
@@ -595,16 +683,7 @@ video {
     color: var(--deep);
 }
 
-#form--contact input,
-#form--contact textarea,
-#topbar .menu,
-#btn__contact--submit {
-    /*玻璃擬態效果*/
-    background-image: linear-gradient(150deg, rgba(252, 222, 222, 0.463), rgba(227, 213, 213, 0.282));
 
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, .2), inset 0px 0px rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px);
-}
 
 #form--contact input,
 #form--contact textarea {

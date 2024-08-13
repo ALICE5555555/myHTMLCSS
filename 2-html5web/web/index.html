@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--這段一定要寫rwd才不會跑掉!!-->
     <title>Rita's Flower</title>
     <link rel="icon" href="./favicon.ico">
     <!-- 換圖輪播css -->
@@ -50,20 +50,19 @@
                     <li><a class="icon-fb" href="#"></a></li>
                     <li><a class="icon-ig" href="#"></a></li>
                     <li><a class="icon-line" href="#"></a></li>
-                    <li><a class="btn-s" href="./login.html">LOGIN</a></li>
+                    <!-- <li><a class="btn-s" href="./login.html">LOGIN</a></li> -->
                 </ul>
                 <!-- main btn | ul.icon>li*6>a-->
-                <ul>
-                    <ul class="menu">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">NEWS</a></li>
-                        <li><a href="#">SERVICE</a></li>
-                        <li><a href="#">VIDEO</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                    </ul>
-                </ul>
 
+                <ul class="menu">
+                    <li><a href="#banner">HOME</a></li>
+                    <li><a href="#news">NEWS</a></li>
+                    <li><a href="#service">SERVICE</a></li>
+                    <li><a href="#video">VIDEO</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="pages.html#page">PAGE</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -320,6 +319,7 @@
             <div class="flower_w"><img src="./images/flower_w.png" alt="裝飾白花"></div>
         </section>
     </main>
+    <!-- 頁尾區 -->
     <footer>
         <!-- LOGO區 -->
         <div>
@@ -347,44 +347,43 @@
             <!-- 選單列 -->
             <nav class="navigation">
                 <!-- main btn | ul.icon>li*6>a-->
-                <ul>
-                    <ul class="menu">
-                        <li><a href="#">HOME</a></li>
-                        <li>
-                            <a href="#">NEWS</a>
-                            <ul class="submenu">
-                                <li><a href="#">媒體報導</a></li>
-                                <li><a href="#">優惠活動</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">SERVICE</a>
-                            <ul class="submenu">
-                                <li><a href="#">服務1</a></li>
-                                <li><a href="#">服務2</a></li>
-                                <li><a href="#">服務3</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">VIDEO</a></li>
-                        <li><a href="#">ABOUT</a>
-                            <ul class="submenu">
-                                <li><a href="#">品牌故事</a></li>
-                                <li><a href="#">公司歷史</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">CONTACT</a>
-                            <ul class="submenu">
-                                <li><a href="#">聯絡方式</a></li>
-                                <li><a href="#">交通路線</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                <ul class="menu">
+                    <li><a href="#">HOME</a></li>
+                    <li>
+                        <a href="#">NEWS</a>
+                        <ul class="submenu">
+                            <li><a href="#">媒體報導</a></li>
+                            <li><a href="#">優惠活動</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">SERVICE</a>
+                        <ul class="submenu">
+                            <li><a href="#">服務1</a></li>
+                            <li><a href="#">服務2</a></li>
+                            <li><a href="#">服務3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">VIDEO</a></li>
+                    <li><a href="#">ABOUT</a>
+                        <ul class="submenu">
+                            <li><a href="#">品牌故事</a></li>
+                            <li><a href="#">公司歷史</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">CONTACT</a>
+                        <ul class="submenu">
+                            <li><a href="#">聯絡方式</a></li>
+                            <li><a href="#">交通路線</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>
         <small>copyright&copy; RITA'S FLOWERS.</small>
+        <div id="gotop"><img src="./images/arrow-up.svg" alt=""></div>
     </footer>
-    <!-- 頁尾區 -->
 
+    
     <!-- 需先載入jquery原始碼，讓瀏覽器讀懂 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> <!-- jquery官網CDN -->
     <script src="./js/carousel.js"></script>
