@@ -36,3 +36,8 @@ $(function () {  /*document ready一個js檔只要執行一次就可以*/
 
     });
 });
+
+//jQuery Smoove
+$('.smoove').smoove({
+    offset:'20%'
+});
